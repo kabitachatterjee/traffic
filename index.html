@@ -1,0 +1,70 @@
+  <!DOCTYPE HTML>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Beat the traffic</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/main.css"></link>
+  </head>
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+                  <li><img class="img-responsive" src="img/light.gif"></li>
+                  <li><h2>Traffic Beats</h2></li>
+        </ul>
+      </div>
+    </nav>
+  	<div id="main" class="container">
+      <div class = "row row-spacer">
+        <div class="col-xs-12 col-sm-4">
+
+  	<form class="form">
+    <div class="form-group">
+      <label for="Source">From</label>
+      <input type="text" onFocus="geolocate()" class="form-control clearable" id="autocomplete">
+
+    </div>
+    <div class="form-group">
+      <label for="Destination">To</label>
+      <input type="text" onFocus="geolocate()" class="form-control clearable" id="autocomplete2">
+    </div><br/>
+    <div class="form-group">
+      <label for="Date">Date</label>
+      <input type="date" class="form-control" id="date" disabled />
+    </div>
+    <div class="form-group">
+      <label for="Time">Time</label>
+      <input type="time" class="form-control" id="time" />
+    </div>
+    <div class="form-group">
+    <button type="button" class="btn btn-default">Submit</button>
+  </div>
+  </form>
+  </div>
+  <div class="col-xs-4 col-sm-8">
+    <div id="visualisation"></div>
+  </div>
+  </div>
+  	</div>
+    <div id ="footer">
+    <div class="row center">
+      <ul class="list-inline list-unstyled col-xs-12 col-sm-12">
+        <li class="list-inline-item"><a href="#" target="_blank"<i class="fa fa-twitter-square fa-2x icon-m m-x-m"></i><span class="sr-only">twitter</span></a></li>
+        <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-facebook-square fa-2x icon-m m-x-m"></i><span class="sr-only">facebook</span></a></li>
+        <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-instagram fa-2x icon-m m-x-m"></i><span class="sr-only">instagram</span></a></li>
+      </ul>
+      <div class="row"><img src="css/google.png"></div>
+    </div>
+  </div>
+  <script src="lib/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUkUqR2r2dfMNgribh4X8XjorobxHTMYA&signed_in=true&libraries=places&callback=initAutocomplete"></script>
+  </body>
+</html>
